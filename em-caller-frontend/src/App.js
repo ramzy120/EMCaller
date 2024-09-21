@@ -3,24 +3,19 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signup from './Signup';
 import Login from './Login';
+import ForgotPassword from './ForgotPassword'; // Import the component
 import './App.css';
-import Home from './Home';  // Import the Home component
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Welcome to EM-Caller!</h1>
-        {/* Define routes for the app */}
+        <h1></h1>
         <Routes>
-          {/* Home Page Route */}
-          <Route path="/" element={<Home />} />
-          
-          {/* Signup Page Route */}
           <Route path="/signup" element={<Signup />} />
-          
-          {/* Login Page Route */}
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} /> {/* Add the new route */}
+          <Route path="/" element={<h2>Home Page</h2>} />
         </Routes>
       </div>
     </Router>

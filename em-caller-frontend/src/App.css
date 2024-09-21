@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f0f4f8; /* Lighter background for contrast */
   color: #333;
 }
 
@@ -29,7 +29,7 @@ body {
 
 /* Header */
 .App-header {
-  background-color: #007bff;
+  background-color: #1e3a8a; /* Darker Blue */
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
   font-size: 1.5rem;
   color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 /* Homepage Heading */
@@ -46,63 +46,80 @@ h1 {
   font-size: 3rem;
   margin: 20px 0;
   color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Text shadow for clarity */
 }
 
 /* Forms */
 form {
   margin: 20px auto;
-  width: 300px;
-  padding: 20px;
+  width: 320px;
+  padding: 25px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for the form */
 }
 
 form input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+form input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
 }
 
 form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #28a745;
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
   background-color: #218838;
+  transform: translateY(-2px); /* Small lift on hover */
+}
+
+form button:active {
+  transform: translateY(0);
 }
 
 /* Links */
 a {
-  color: #61dafb;
+  color: #007bff; /* Blue link */
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #0056b3; /* Darker blue on hover */
 }
 
 /* Footer */
 footer {
   margin-top: 50px;
   padding: 20px;
-  background-color: #007bff;
+  background-color: #1e3a8a; /* Same blue as header */
   color: white;
   text-align: center;
   border-radius: 0 0 8px 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Footer shadow */
 }
 
 footer p {
   margin: 0;
   font-size: 1rem;
+  color: #f0f4f8; /* Lighter text for contrast */
 }
