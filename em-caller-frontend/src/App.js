@@ -1,21 +1,33 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { auth } from './firebase'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './Signup';
 import Login from './Login';
-import ForgotPassword from './ForgotPassword'; // Import the component
-import './App.css';
+import Profile from './Profile';
+import Home from './Home';
+import Navbar from './Navbar';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <Router>
       <div className="App">
-        <h1></h1>
+        <Navbar user={user} />
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} /> {/* Add the new route */}
-          <Route path="/" element={<h2>Home Page</h2>} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>

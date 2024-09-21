@@ -19,6 +19,10 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    if (password.length < 6) {
+      setError('Password should be at least 6 characters.');
+      return;
+    }
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       navigate('/'); // Redirect to home after signup

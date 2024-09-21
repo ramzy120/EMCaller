@@ -18,9 +18,15 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/'); // Redirect to home after login
     } catch (err) {
+      if (err.code === 'auth/user-not-found') {
+        setError('No user found with this email.');
+      } else if (err.code === 'auth/wrong-password') {
+        setError('Incorrect password. Please try again.');
+      } else {
       setError(err.message);
     }
-  };
+  }
+};
 
   return (
     <div className="login-container">
