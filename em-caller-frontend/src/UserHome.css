@@ -1,0 +1,71 @@
+/* General Styling for User Home Page */
+.user-home-container {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .dashboard-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.5em;
+  }
+  
+  .dashboard-header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .dashboard-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: calc(50% - 20px);
+    min-width: 300px;
+  }
+  
+  .dashboard-card h3 {
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  
+  .dashboard-card p {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dashboard-card button:hover {
+    background-color: #0056b3;
+  }  

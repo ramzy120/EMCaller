@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { auth } from './firebase'; 
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Import the Login.css file
-import logo from './img/emcallerlogo.png'; // Assuming logo is stored in this location
+import './Login.css'; 
+import logo from './img/emcallerlogo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -16,17 +16,11 @@ const Login = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/'); // Redirect to home after login
+      navigate('/home'); // Redirect to the user home page after login
     } catch (err) {
-      if (err.code === 'auth/user-not-found') {
-        setError('No user found with this email.');
-      } else if (err.code === 'auth/wrong-password') {
-        setError('Incorrect password. Please try again.');
-      } else {
       setError(err.message);
     }
-  }
-};
+  };
 
   return (
     <div className="login-container">

@@ -1,7 +1,7 @@
 // src/Profile.js
 import React, { useEffect, useState } from 'react';
 import { auth } from './firebase'; 
-import './Profile.css'; // Create a corresponding CSS file
+import './Profile.css';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -24,6 +24,7 @@ const Profile = () => {
         <div>
           <h2>User Profile</h2>
           <p>Email: {user.email}</p>
+          <p>Display Name: {user.displayName || 'N/A'}</p>
           <p>UID: {user.uid}</p>
         </div>
       ) : (

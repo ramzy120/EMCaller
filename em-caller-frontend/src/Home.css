@@ -25,6 +25,7 @@ body {
 .hero p {
   font-size: 1.2em;
   margin: 10px 0;
+  color:#e9ecef;
 }
 
 .hero .button {
