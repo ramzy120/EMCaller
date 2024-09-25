@@ -1,30 +1,39 @@
-// src/UserHome.js
 import React from 'react';
-import './UserHome.css'; // Add CSS file for styling
+import './UserHome.css'; // Ensure the path is correct
+import { useNavigate } from 'react-router-dom';
 
 const UserHome = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="user-home-container">
-      <header className="dashboard-header">
-        <h1>Welcome Back to EM-Caller</h1>
-        <p>Manage your meetings, stay connected, and collaborate effectively.</p>
+    <div className="userhome-container">
+      <header className="userhome-header">    
+        <h1>Welcome to EM Caller</h1>
+        <p>Experience seamless video conferencing with ease.</p>
       </header>
 
-      <section className="dashboard-content">
-        <h2>Your Dashboard</h2>
-        <div className="dashboard-cards">
-          <div className="dashboard-card">
-            <h3>Upcoming Meetings</h3>
-            <p>No upcoming meetings scheduled.</p>
-            <button>Schedule New Meeting</button>
-          </div>
-          <div className="dashboard-card">
-            <h3>Recent Calls</h3>
-            <p>No recent calls available.</p>
-            <button>View Call History</button>
-          </div>
+      <div className="userhome-content">
+        <div className="userhome-card" onClick={() => navigate('/profile')}>
+          <h2>Your Profile</h2>
+          <p>Manage your personal details and preferences.</p>
         </div>
-      </section>
+        <div className="userhome-card" onClick={() => navigate('/schedule')}>
+          <h2>Schedule Meeting</h2>
+          <p>Set up and schedule video meetings effortlessly.</p>
+        </div>
+        <div className="userhome-card" onClick={() => navigate('/meetings')}>
+          <h2>Join a Meeting</h2>
+          <p>Access your ongoing or scheduled meetings.</p>
+        </div>
+        <div className="userhome-card" onClick={() => navigate('/support')}>
+          <h2>Support</h2>
+          <p>Get help or contact support for any assistance.</p>
+        </div>
+      </div>
+
+      <footer className="userhome-footer">
+        <p>© {new Date().getFullYear()} EM Caller. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

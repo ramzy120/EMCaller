@@ -1,31 +1,82 @@
 /* src/Profile.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
 .profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f2f5;
+  background-color: #f5f5f5;
 }
 
-.profile-container div {
+.profile-box {
   background-color: white;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px;
   text-align: center;
+  width: 350px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
   color: #333;
 }
 
 p {
-  font-size: 1.1rem;
-  margin: 10px 0;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
 }
 
-p span {
-  font-weight: bold;
+.profile-buttons {
+  margin-top: 20px;
+}
+
+.edit-profile-btn,
+.logout-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+  background-color: #0056b3;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 500px) {
+  .profile-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }

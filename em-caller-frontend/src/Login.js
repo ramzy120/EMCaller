@@ -1,4 +1,3 @@
-// src/Login.js
 import React, { useState } from 'react';
 import { auth } from './firebase'; 
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -16,9 +15,15 @@ const Login = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/home'); // Redirect to the user home page after login
+      navigate('/'); // Redirect to user home page after login
     } catch (err) {
-      setError(err.message);
+      if (err.code === 'auth/wrong-password') {
+        setError('Incorrect password. Please try again.');
+      } else if (err.code === 'auth/user-not-found') {
+        setError('No account found with this email.');
+      } else {
+        setError('Failed to login. Please try again later.');
+      }
     }
   };
 

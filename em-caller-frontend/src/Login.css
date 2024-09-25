@@ -1,47 +1,71 @@
 /* src/Login.css */
+
+/* General Reset and Box Sizing */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
+    background-color: #f1f3f5; /* Matches background with signup */
 }
 
+/* Container to Center the Login Form */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    background-color: #f1f3f5;
 }
 
+/* Login Box Styling */
 .login-box {
     background-color: #fff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     text-align: left;
 }
 
+/* Logo Styling */
 .header-logo {
     display: block;
     margin: 0 auto 20px auto;
-    width: 150px; /* Adjust the width as necessary */
+    width: 150px; /* Can be adjusted as necessary */
 }
 
+/* Heading Styling */
 h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
 }
 
+/* Form Input Styling */
 form input {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
+/* Input Hover/Focus State */
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Login Button Styling */
 .login-button {
     width: 100%;
     padding: 12px;
@@ -51,24 +75,31 @@ form input {
     border-radius: 6px;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .login-button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
+/* Error Message Styling */
 .error-message {
     color: red;
+    font-size: 0.9rem;
     margin-top: 10px;
 }
 
+/* Extra Links Styling (for forgot password or signup links) */
 .extra-links {
     margin-top: 15px;
+    text-align: center;
 }
 
 .extra-links a {
     color: #007bff;
     text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .extra-links a:hover {

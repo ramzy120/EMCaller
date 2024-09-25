@@ -239,3 +239,41 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(33% - 40px); /* Three cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 40px); /* Two cards per row on small screens */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* One card per row on mobile screens */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .integration-logos img {
+    max-width: 80px;
+  }
+}

@@ -1,71 +1,75 @@
-/* General Styling for User Home Page */
-.user-home-container {
-    text-align: center;
-    padding: 40px;
-  }
-  
-  .dashboard-header {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    padding: 60px 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dashboard-header h1 {
-    font-size: 2.5em;
-  }
-  
-  .dashboard-header p {
-    font-size: 1.2em;
-    margin: 10px 0;
-  }
-  
-  .dashboard-content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .dashboard-content h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .dashboard-card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: calc(50% - 20px);
-    min-width: 300px;
-  }
-  
-  .dashboard-card h3 {
-    font-size: 1.5em;
-    color: #007bff;
-  }
-  
-  .dashboard-card p {
-    font-size: 1em;
-    margin-bottom: 10px;
-  }
-  
-  .dashboard-card button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .dashboard-card button:hover {
-    background-color: #0056b3;
-  }  
+/* src/UserHome.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.userhome-container {
+  text-align: center;
+  background-color: #f1f3f5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.userhome-header {
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.header-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.userhome-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.userhome-header p {
+  font-size: 1.2rem;
+}
+
+.userhome-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.userhome-card {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.userhome-card:hover {
+  transform: translateY(-5px);
+}
+
+.userhome-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.userhome-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.userhome-footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}

@@ -10,7 +10,7 @@ const Logout = () => {
   useEffect(() => {
     const logoutUser = async () => {
       await signOut(auth);
-      navigate('/login'); // Redirect to login after logout
+      navigate('/login'); 
     };
     logoutUser();
   }, [navigate]);
